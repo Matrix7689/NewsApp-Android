@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/swiperefresh_home">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <androidx.cardview.widget.CardView
+            android:id="@+id/home_weather"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            app:cardCornerRadius="10dp"
+            android:layout_margin="3dp">
+            <RelativeLayout
+                android:id="@+id/rel_weather"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/city_weather"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Location City"
+                    android:textColor="#FFFFFF"
+                    android:textSize="26sp"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp"/>
+                 <TextView
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent"
+                     android:text="Location State"
+                     android:id="@+id/state_weather"
+                     android:textSize="20sp"
+                     android:layout_marginLeft="30dp"
+                     android:layout_marginTop="45dp"
+                     android:textColor="#FFFFFF" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/temperature_weather"
+                    android:text="0 °C"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:textSize="26sp"
+                    android:layout_marginLeft="300dp"
+                    android:layout_marginTop="10dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/type_weather"
+                    android:text="Clouds"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:layout_marginLeft="307dp"
+                    android:layout_marginTop="45dp"/>
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/home_cards"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/home_weather"/>
+        </RelativeLayout>
+    </ScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar_home"
+        android:indeterminateTint="@color/colorPrimary"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true" />
+    <TextView
+        android:id="@+id/progressText_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fetching News"
+        android:textSize="14sp"
+        android:layout_below="@id/progressBar_home"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>

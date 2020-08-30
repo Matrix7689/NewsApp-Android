@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailedActivity"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/detail_toolbar"
+        android:layout_width="300dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:title="NewsApp">
+    </androidx.appcompat.widget.Toolbar>
+
+    <ImageView
+        android:id="@+id/detail_bmark"
+        android:layout_toLeftOf="@id/detail_twitter"
+        android:layout_width="55dp"
+        android:layout_height="?attr/actionBarSize"
+        android:scaleType="fitXY" />
+
+    <ImageView
+        android:layout_alignParentRight="true"
+        android:id="@+id/detail_twitter"
+        android:layout_width="55dp"
+        android:layout_height="?attr/actionBarSize" />
+
+    <ScrollView
+        android:layout_below="@id/detail_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/detailed_card"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="10dp"
+        android:layout_margin="3dp"
+        android:visibility="gone">
+        <RelativeLayout
+            android:id="@+id/rel_weather"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginBottom="10dp">
+            <ImageView
+                android:id="@+id/detail_image"
+                android:layout_width="match_parent"
+                android:layout_height="265dp"
+                android:scaleType="fitXY" />
+
+            <TextView
+                android:id="@+id/detail_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/detail_image"
+                android:textAlignment="center"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:gravity="center_horizontal"
+                android:layout_marginBottom="10dp" />
+
+            <TextView
+                android:id="@+id/detail_section"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/detail_title"
+                android:textSize="15sp"
+                android:paddingLeft="8dp"/>
+
+            <TextView
+                android:id="@+id/detail_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/detail_title"
+                android:textSize="15sp"
+                android:layout_alignParentRight="true"
+                android:paddingRight="8dp"/>
+
+            <TextView
+                android:id="@+id/detail_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/detail_section"
+                android:textSize="17sp"
+                android:textColorLink="@color/colorPrimary"
+                android:layout_marginTop="10dp"
+                android:maxLines="30"
+                android:ellipsize="end"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"/>
+
+            <TextView
+                android:id="@+id/detail_view_full_art"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/view_full"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:layout_below="@id/detail_desc"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="false"
+                android:linksClickable="false"
+                android:autoLink="all"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="2dp"
+                android:visibility="gone"/>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressBar_detail"
+        android:indeterminateTint="@color/colorPrimary"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true" />
+    <TextView
+        android:id="@+id/progressText_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fetching News"
+        android:textSize="14sp"
+        android:layout_below="@id/progressBar_detail"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>
