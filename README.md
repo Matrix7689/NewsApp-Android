@@ -1,5 +1,5 @@
 # NewsApp Android App
-## ⚡💻 [Video Preview](https://www.youtube.com/watch?v=Pxl6860Nsec)
+## ⚡📱 [Video Preview](https://www.youtube.com/watch?v=Pxl6860Nsec)
 <div align="center"><img src="https://i.imgur.com/RWfSVbY.png"/></div>
 
 The app shows latest news using Guardian API, and latest weather information using OpenWeatherMap API - based on user's live location.
@@ -11,6 +11,11 @@ Used Google Trends API and MP Android Chart to graph keyword trends searched by 
 Implemented Bing Autosuggest API in the search bar to help users look for news related to a specific keyword.
 
 PS. This was homework #9 of CSCI 571 - Spring 2020 - Web Technologies - under [Professor Marco Papa](https://viterbi.usc.edu/directory/faculty/Papa/Marco).
+
+## Setup
+1. Download / clone this repo.
+2. Import this project in Android studio (Java)
+3. Edit MainActivity.java and insert Bing Autosuggest, Openweathermap API keys.
 
 ## Technologies Used
 - Java
